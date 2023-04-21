@@ -1,0 +1,129 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 0.5em;
+  margin: 0 auto;
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+}
+
+/* Table styles */
+
+.table {
+  border-collapse: collapse;
+  margin: 1.5em auto;
+  font-size: 0.9rem;
+  border: 2px solid #333333;
+  box-shadow: 10px 10px 10px #666666;
+}
+
+.table thead tr {
+  background-color: #0070c0;
+  color: white;
+  font-weight: bold;
+}
+
+.table th,
+.table td {
+  border-left: 2px solid #333333;
+  border-right: 2px solid #333333;
+}
+
+.table th {
+  padding: 0.5em 0;
+}
+
+.players-names td {
+  padding: 0.5em 0;
+}
+
+.players-games td {
+  padding: 0.2em 0;
+}
+
+.table tbody tr:first-child {
+  border-top: 2px solid #333333;
+}
+
+.players-names tbody tr {
+  border-top: 2px solid #dddddd;
+}
+
+.players-games tbody tr:nth-of-type(even) {
+  border-top: 2px solid #dddddd;
+}
+
+.players-games tbody tr:nth-of-type(odd) {
+  border-top: 2px solid #333333;
+}
+
+.table tbody tr:last-child {
+  border-bottom: 2px solid #333333;
+}
+
+.table tbody tr {
+  background: #ffffcc;
+}
+
+.col {
+  width: 50px;
+}
+
+.col:first-child {
+  width: 150px;
+}
+
+/* Inputs */
+
+.four-player-button {
+  margin-left: 4em;
+}
+
+input[type='text'] {
+  border: none;
+  background: #ffffcc;
+  width: 90%;
+  color: #272727;
+}
+
+input[type='text']:focus {
+  outline: none;
+}
+
+.set-points {
+  text-align: center;
+}
+
+.fill-player-1,
+.fill-player-2,
+.fill-player-3,
+.fill-player-4 {
+  color: #272727;
+  font-size: 0.9em;
+}
+
+input[type='submit'] {
+  padding: 0.5em 1em;
+  background: #0070c0;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px #666666;
+}
+
+/* General styles */
+
+.four-players {
+  display: none;
+}
+
+@media (min-width: 620px) {
+  .col:first-child {
+    width: 300px;
+  }
+}

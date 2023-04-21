@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Planilla tenis de mesa</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <input class="three-player-button" id="three-player-button" type="radio" name="number-of-players" checked>
+    <label for="three-player-button">3 jugadores</label>
+    <input class="four-player-button" id="four-player-button" type="radio" name="number-of-players">
+    <label for="four-player-button">4 jugadores</label>
+
+    <table class="table players-names">
+      <thead>
+        <tr>
+          <th class="col">Nombre Jugador</th>
+          <th class="col">PG</th>
+          <th class="col">SF/SC</th>
+          <th class="col">CdS</th>
+          <th class="col">PF/PC</th>
+          <th class="col">CdP</th>
+          <th class="col">Pos</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><input type="text" class="player" data-number="1" placeholder="Jugador 1" /></td>
+          <td class="pg pg-three-players" data-number="1" /></td>
+          <td class="sf-sc sf-sc-three-players" data-number="1" /></td>
+          <td class="cds cds-three-players" data-number="1" /></td>
+          <td class="pf-pc pf-pc-three-players" data-number="1" /></td>
+          <td class="cdp cdp-three-players" data-number="1" /></td>
+          <td class="pos pos-three-players" data-number="1" /></td>
+        </tr>
+        <tr>
+          <td><input type="text" class="player" data-number="2" placeholder="Jugador 2" /></td>
+          <td class="pg pg-three-players" data-number="2" /></td>
+          <td class="sf-sc sf-sc-three-players" data-number="2" /></td>
+          <td class="cds cds-three-players" data-number="2" /></td>
+          <td class="pf-pc pf-pc-three-players" data-number="2" /></td>
+          <td class="cdp cdp-three-players" data-number="2" /></td>
+          <td class="pos pos-three-players" data-number="2" /></td>
+        </tr>
+        <tr>
+          <td><input type="text" class="player" data-number="3" placeholder="Jugador 3" /></td>
+          <td class="pg pg-three-players" data-number="3" /></td>
+          <td class="sf-sc sf-sc-three-players" data-number="3" /></td>
+          <td class="cds cds-three-players" data-number="3" /></td>
+          <td class="pf-pc pf-pc-three-players" data-number="3" /></td>
+          <td class="cdp cdp-three-players" data-number="3" /></td>
+          <td class="pos pos-three-players" data-number="3" /></td>
+        </tr>
+        <tr class="four-players">
+          <td><input type="text" class="player four-players" data-number="4" placeholder="Jugador 4" /></td>
+          <td class="pg" data-number="4" /></td>
+          <td class="sf-sc" data-number="4" /></td>
+          <td class="cds" data-number="4" /></td>
+          <td class="pf-pc" data-number="4" /></td>
+          <td class="cdp" data-number="4" /></td>
+          <td class="pos" data-number="4" /></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table class="table players-games">
+      <thead>
+        <tr>
+          <th class="col">Partido</th>
+          <th class="col">S1</th>
+          <th class="col">S2</th>
+          <th class="col">S3</th>
+
+          <th class="col">Sets</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><input type="text" class="fill-player" data-number="1"></td>
+          <td><input type="text" class="set-points set-points-three-players" data-number="1" data-rival="3" placeholder="0" oninput="this.value = this.value.replace(/[^0-9.]/g, '')"></input></td>
+          <td><input type="text" class="set-points set-points-three-players" data-number="1" data-rival="3" placeholder="0" oninput="this.value = this.value.replace(/[^0-9.]/g, '')"></input></td>
+          <td><input type="text" class="set-points set-points-three-players" data-number="1" data-rival="3" placeholder="0" oninput="this.value = this.value.replace(/[^0-9.]/g, '')"></input></td>
+          <td class="sets sets-three-players" data-number="1" data-rival="3"></td>
+        </tr>
+        <tr>
+          <td><input type="text" class="fill-player" data-number="3"></td>
+          <td><input type="text" class="set-points set-points-three-players" data-number="3" data-rival="1" placeholder="0" oninput="this.value = this.value.replace(/[^0-9.]/g, '')"></input></td>
+          <td><input type="text" class="set-points set-points-three-players" data-number="3" data-rival="1" placeholder="0" oninput="this.value = this.value.replace(/[^0-9.]/g, '')"></input></td>
+          <td><input type="text" class="set-points set-points-three-players" data-number="3" data-rival="1" placeholder="0" oninput="this.value = this.value.replace(/[^0-9.]/g, '')"></input></td>
+          <td class="sets sets-three-players" data-number="3" data-rival="1"></td>
+        </tr>
+        <tr class="four-players">
+          <td><input type="text" class="fill-player" data-number="2"></td>
+          <td><input type="text" class="set-points" data-number="2" data-rival="4" placeholder="0" oninput="this.value = this.value.replace(/[^0-9.]/g, '')"></input></td>
+          <td><input type="text" class="set-points" data-number="2" data-rival="4" placeholder="0" oninput="this.value = this.value.replace(/[^0-9.]/g, '')"></input></td>
+          <td><input type="text" class="set-points" data-number="2" data-rival="4" placeholder="0" oninput="this.value = this.value.replace(/[^0-9.]/g, '')"></input></td>
+          <td class="sets" data-number="2" data-rival="4"></td>
+        </tr>
+        <tr class="four-players">
+          <td><input type="text" class="fill-player" data-number="4"></td>
+          <td><input type="text" class="set-points" data-number="4" data-rival="2" placeholder="0" oninput="this.value = this.value.replace(/[^0-9.]/g, '')"></input></td>
+          <td><input type="text" class="set-points" data-number="4" data-rival="2" placeholder="0" oninput="this.value = this.value.replace(/[^0-9.]/g, '')"></input></td>
+          <td><input type="text" class="set-points" data-number="4" data-rival="2" placeholder="0" oninput="this.value = this.value.replace(/[^0-9.]/g, '')"></input></td>
+          <td class="sets" data-number="4" data-rival="2"></td>
+        </tr>
+        <tr>
+          <td><input type="text" class="fill-player" data-number="1"></td>
+          <td><input type="text" class="set-points set-points-three-players" data-number="1" data-rival="2" placeholder="0" oninput="this.value = this.value.replace(/[^0-9.]/g, '')"></input></td>
+          <td><input type="text" class="set-points set-points-three-players" data-number="1" data-rival="2" placeholder="0" oninput="this.value = this.value.replace(/[^0-9.]/g, '')"></input></td>
+          <td><input type="text" class="set-points set-points-three-players" data-number="1" data-rival="2" placeholder="0" oninput="this.value = this.value.replace(/[^0-9.]/g, '')"></input></td>
+          <td class="sets sets-three-players" data-number="1" data-rival="2"></td>
+        </tr>
+        <tr>
+          <td><input type="text" class="fill-player" data-number="2"></td>
+          <td><input type="text" class="set-points set-points-three-players" data-number="2" data-rival="1" placeholder="0" oninput="this.value = this.value.replace(/[^0-9.]/g, '')"></input></td>
+          <td><input type="text" class="set-points set-points-three-players" data-number="2" data-rival="1" placeholder="0" oninput="this.value = this.value.replace(/[^0-9.]/g, '')"></input></td>
+          <td><input type="text" class="set-points set-points-three-players" data-number="2" data-rival="1" placeholder="0" oninput="this.value = this.value.replace(/[^0-9.]/g, '')"></input></td>
+          <td class="sets sets-three-players" data-number="2" data-rival="1"></td>
+        </tr>
+        <tr class="four-players">
+          <td><input type="text" class="fill-player" data-number="3"></td>
+          <td><input type="text" class="set-points" data-number="3" data-rival="4" placeholder="0" oninput="this.value = this.value.replace(/[^0-9.]/g, '')"></input></td>
+          <td><input type="text" class="set-points" data-number="3" data-rival="4" placeholder="0" oninput="this.value = this.value.replace(/[^0-9.]/g, '')"></input></td>
+          <td><input type="text" class="set-points" data-number="3" data-rival="4" placeholder="0" oninput="this.value = this.value.replace(/[^0-9.]/g, '')"></input></td>
+          <td class="sets" data-number="3" data-rival="4"></td>
+        </tr>
+        <tr class="four-players">
+          <td><input type="text" class="fill-player" data-number="4"></td>
+          <td><input type="text" class="set-points" data-number="4" data-rival="3" placeholder="0" oninput="this.value = this.value.replace(/[^0-9.]/g, '')"></input></td>
+          <td><input type="text" class="set-points" data-number="4" data-rival="3" placeholder="0" oninput="this.value = this.value.replace(/[^0-9.]/g, '')"></input></td>
+          <td><input type="text" class="set-points" data-number="4" data-rival="3" placeholder="0" oninput="this.value = this.value.replace(/[^0-9.]/g, '')"></input></td>
+          <td class="sets" data-number="4" data-rival="3"></td>
+        </tr>
+        <tr class="four-players">
+          <td><input type="text" class="fill-player" data-number="1"></td>
+          <td><input type="text" class="set-points" data-number="1" data-rival="4" placeholder="0" oninput="this.value = this.value.replace(/[^0-9.]/g, '')"></input></td>
+          <td><input type="text" class="set-points" data-number="1" data-rival="4" placeholder="0" oninput="this.value = this.value.replace(/[^0-9.]/g, '')"></input></td>
+          <td><input type="text" class="set-points" data-number="1" data-rival="4" placeholder="0" oninput="this.value = this.value.replace(/[^0-9.]/g, '')"></input></td>
+          <td class="sets" data-number="1" data-rival="4"></td>
+        </tr>
+        <tr class="four-players">
+          <td><input type="text" class="fill-player" data-number="4"></td>
+          <td><input type="text" class="set-points" data-number="4" data-rival="1" placeholder="0" oninput="this.value = this.value.replace(/[^0-9.]/g, '')"></input></td>
+          <td><input type="text" class="set-points" data-number="4" data-rival="1" placeholder="0" oninput="this.value = this.value.replace(/[^0-9.]/g, '')"></input></td>
+          <td><input type="text" class="set-points" data-number="4" data-rival="1" placeholder="0" oninput="this.value = this.value.replace(/[^0-9.]/g, '')"></input></td>
+          <td class="sets" data-number="4" data-rival="1"></td>
+        </tr>
+        <tr>
+          <td><input type="text" class="fill-player" data-number="2"></td>
+          <td><input type="text" class="set-points set-points-three-players" data-number="2" data-rival="3" placeholder="0" oninput="this.value = this.value.replace(/[^0-9.]/g, '')"></input></td>
+          <td><input type="text" class="set-points set-points-three-players" data-number="2" data-rival="3" placeholder="0" oninput="this.value = this.value.replace(/[^0-9.]/g, '')"></input></td>
+          <td><input type="text" class="set-points set-points-three-players" data-number="2" data-rival="3" placeholder="0" oninput="this.value = this.value.replace(/[^0-9.]/g, '')"></input></td>
+          <td class="sets sets-three-players" data-number="2" data-rival="3"></td>
+        </tr>
+        <tr>
+          <td><input type="text" class="fill-player" data-number="3"></td>
+          <td><input type="text" class="set-points set-points-three-players" data-number="3" data-rival="2" placeholder="0" oninput="this.value = this.value.replace(/[^0-9.]/g, '')"></input></td>
+          <td><input type="text" class="set-points set-points-three-players" data-number="3" data-rival="2" placeholder="0" oninput="this.value = this.value.replace(/[^0-9.]/g, '')"></input></td>
+          <td><input type="text" class="set-points set-points-three-players" data-number="3" data-rival="2" placeholder="0" oninput="this.value = this.value.replace(/[^0-9.]/g, '')"></input></td>
+          <td class="sets sets-three-players" data-number="3" data-rival="2"></td>
+        </tr>
+      </tbody>
+    </table>
+    <input type="submit" value="Chequear">
+    <script src="script.js"></script>
+  </body>
+</html>
